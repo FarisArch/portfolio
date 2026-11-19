@@ -54,6 +54,17 @@ h3{font:600 1.1rem/1.35 var(--head);margin:0 0 .25rem}
 .when{color:var(--muted);margin:0 0 .6rem;font-size:.95rem}
 .timeline ul{margin:0;padding-left:1.1rem}
 .timeline ul li{margin-bottom:.35rem}
+.case-study{display:grid;grid-template-columns:1.35fr 1fr;align-items:center;gap:1.5rem;
+  margin-bottom:1rem;padding:clamp(1rem,3vw,2rem);background:var(--panel);
+  border:1px solid var(--line);border-left:3px solid var(--signal);border-radius:8px}
+.case-study h3{font-size:1.45rem}
+.case-study p:last-child{margin-bottom:0}
+.cutover-diagram{margin:0}
+.cutover-diagram figcaption{font-weight:600;margin:0 0 .5rem}
+.cutover-path{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.35rem;
+  margin-top:.5rem;font-size:.875rem;text-align:center}
+.cutover-path span:not([aria-hidden]){padding:.45rem .2rem;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+.cutover-path span[aria-hidden]{color:var(--link);font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .grid article{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1.25rem}
 .grid p{margin:.4rem 0 .6rem;color:var(--muted);font-size:1rem}
@@ -67,7 +78,8 @@ h3{font:600 1.1rem/1.35 var(--head);margin:0 0 .25rem}
 .skills dd{margin:0;color:var(--muted)}
 footer{max-width:1100px;margin:0 auto;padding:2rem clamp(1rem,5vw,4rem);color:var(--muted);border-top:1px solid var(--line)}
 @media (max-width:820px){
-  .hero{grid-template-columns:1fr}
+  html{scroll-padding-top:8rem}
+  .hero,.case-study{grid-template-columns:1fr}
   .certs li{flex-wrap:wrap}.certs span{margin-left:0}
   .skills{grid-template-columns:1fr;gap:.1rem}.skills dd{margin-bottom:.7rem}
 }

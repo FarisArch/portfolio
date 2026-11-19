@@ -7,18 +7,21 @@
 <meta name="description" content="Network engineer in Putrajaya, Malaysia working with Cisco, Juniper, FortiGate and Check Point: routing, firewalls, VPNs and monitoring.">
 <link rel="canonical" href="https://faris-aiman.com/">
 <meta name="author" content="Mohamad Faris Aiman">
-<meta name="theme-color" content="#0b1220"> <!-- TODO: match your site's background -->
+<meta name="theme-color" content="#EDF1F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1A26" media="(prefers-color-scheme: dark)">
 
 <!-- Social previews -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Mohamad Faris Aiman – Network Engineer">
 <meta property="og:description" content="Routing, firewalls, VPNs and monitoring across Cisco, Juniper, FortiGate and Check Point.">
 <meta property="og:url" content="https://faris-aiman.com/">
-<meta property="og:image" content="https://faris-aiman.com/og-image.png"> <!-- TODO: create a 1200x630 image -->
+<meta property="og:image" content="https://faris-aiman.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mohamad Faris Aiman, Network Engineer">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"> <!-- TODO: add a favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +42,6 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Putrajaya", "addressCountry": "MY" },
   "knowsAbout": ["Network engineering", "Firewalls", "IPsec VPN", "Cisco", "Juniper", "FortiGate", "Check Point", "Network security"],
   "sameAs": [
-    "https://www.linkedin.com/in/TODO",
     "https://github.com/FarisArch",
     "https://gitlab.com/farisarch",
     "https://farisarch.medium.com"
@@ -66,7 +68,7 @@
       <p class="lead">I keep enterprise networks and firewalls running: routing, switching, VPNs, VLANs and monitoring across Cisco, Juniper, FortiGate and Check Point. Currently supporting client environments at Ekco Asia.</p>
       <p class="actions">
         <a class="btn" href="mailto:farisaimansaser@gmail.com">Email me</a>
-        <a class="btn ghost" href="https://farisarch.medium.com" target="_blank" rel="noopener">Read my blog</a>
+        <a class="btn ghost" href="#work">View selected work</a>
       </p>
     </div>
     <svg id="topo" viewBox="0 0 480 360" role="img" aria-label="Network diagram linking Faris to Cisco, Juniper, FortiGate and Check Point, with the certifications held for each">
@@ -101,7 +103,7 @@
         <p class="when">Dec 2025 – Apr 2026, Kuala Lumpur</p>
         <ul>
           <li>Resolved routing, NAT and access-policy issues across Juniper and FortiGate firewalls and Cisco firewalls and switches.</li>
-          <li>Separated the ISP paths of Development and Production with minimal service disruption.</li>
+          <li>Separated the ISP paths for Development and Production with minimal service disruption. <a href="#finexus-cutover">Read the cutover case study</a>.</li>
           <li>Configured and monitored IPsec VPN and Peplink SpeedFusion links for site-to-site connectivity.</li>
           <li>Managed network whitelisting and OpenZiti access requests for development and production workloads.</li>
           <li>Built Grafana dashboards on Prometheus data for device health, performance and bandwidth.</li>
@@ -124,6 +126,18 @@
 
   <section id="work">
     <h2>Selected work</h2>
+    <article class="case-study" id="finexus-cutover" aria-labelledby="finexus-title">
+      <div>
+        <h3 id="finexus-title">Separating Development and Production ISP paths</h3>
+        <p class="when">Finexus International</p>
+        <p>I moved Development and Production onto separate ISP paths. The cutover was completed with minimal service disruption.</p>
+      </div>
+      <figure class="cutover-diagram">
+        <figcaption>ISP paths after the cutover</figcaption>
+        <div class="cutover-path"><span>Development</span><span aria-hidden="true">→</span><span>Dev ISP path</span></div>
+        <div class="cutover-path"><span>Production</span><span aria-hidden="true">→</span><span>Prod ISP path</span></div>
+      </figure>
+    </article>
     <div class="grid">
       <article>
         <h3>Firewall labs in GNS3 and VMware</h3>
@@ -140,7 +154,7 @@
       <article>
         <h3>Malware analysis write-ups</h3>
         <p>Analysed real samples with Ghidra, GDB and IDA Pro and published the findings on my blog.</p>
-        <a href="https://farisarch.medium.com" target="_blank" rel="noopener">Read the blog</a>
+        <a href="https://farisarch.medium.com/letsdefend-io-soc-145-ransomware-detected-walkthrough-75b03db98de9" target="_blank" rel="noopener">Read the ransomware analysis</a>
       </article>
     </div>
     <p class="more">More code and lab notes on <a href="https://gitlab.com/farisarch" target="_blank" rel="noopener">GitLab</a>.</p>
