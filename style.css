@@ -59,6 +59,10 @@ h3{font:600 1.1rem/1.35 var(--head);margin:0 0 .25rem}
   border:1px solid var(--line);border-left:3px solid var(--signal);border-radius:8px}
 .case-study h3{font-size:1.45rem}
 .case-study p:last-child{margin-bottom:0}
+.lab-case-study{display:block}
+.lab-case-study>p,.lab-case-study>ol{max-width:48rem}
+.lab-case-study>ol{margin:1rem 0 0;padding-left:1.4rem}
+.lab-case-study li+li{margin-top:.65rem}
 .cutover-diagram{margin:0}
 .cutover-diagram figcaption{font-weight:600;margin:0 0 .5rem}
 .cutover-path{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.35rem;

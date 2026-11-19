@@ -126,6 +126,17 @@
 
   <section id="work">
     <h2>Selected work</h2>
+    <article class="case-study lab-case-study" id="ai-gns3" aria-labelledby="ai-gns3-title">
+      <h3 id="ai-gns3-title">Integrating AI into a GNS3 network lab</h3>
+      <p>I connected Codex to GNS3 through Model Context Protocol (MCP) so it could inspect and work with a running lab. To test the integration end to end, I used a two-site topology to bring up an IPsec tunnel and verify the traffic across it.</p>
+      <ol>
+        <li><strong>Connect Codex to GNS3.</strong> I registered the GNS3 MCP server in Codex, restarted the client, and confirmed the connection with a read-only request that listed two GNS3 projects.</li>
+        <li><strong>Map the running lab.</strong> I used MCP to inspect the Small Branch lab, which had 30 running nodes and 29 Ethernet links. The topology showed Sophos XG at HQ and OPNsense at the branch, with a simulated ISP router in between.</li>
+        <li><strong>Verify device access.</strong> I checked console access on four Alpine Linux nodes and the Sophos firewall using read-only commands. This confirmed I could inspect the lab from both an endpoint and a firewall.</li>
+        <li><strong>Bring up the site-to-site tunnel.</strong> With Codex assisting through the lab API and device consoles, I configured matching IKEv2 and ESP settings on Sophos and OPNsense. The firewall rules allowed the HQ corporate VLAN to initiate connections to the branch server VLAN through the tunnel and blocked direct WAN fallback between those networks.</li>
+        <li><strong>Test reachability, encryption, and access boundaries.</strong> The HQ corporate test host reached both branch test servers by ping and received HTTP 200 from a temporary listener. The WAN capture showed ESP traffic and no cleartext HTTP for the test. The same HTTP check from the HQ server VLAN timed out, a branch-initiated ping to the HQ corporate host received no replies, and a forced rekey succeeded.</li>
+      </ol>
+    </article>
     <article class="case-study" id="finexus-cutover" aria-labelledby="finexus-title">
       <div>
         <h3 id="finexus-title">Separating Development and Production ISP paths</h3>
